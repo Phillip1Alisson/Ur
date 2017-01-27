@@ -16,7 +16,7 @@ public class Area {
         double TRIANGULO = 0.0, CIRCULO = 0.0, TRAPEZIO = 0.0, QUADRADO = 0.0, RETANGULO = 0.0;
 
         a = entrada.nextDouble();
-        b = entrada.nextDouble();
+        b = entrada.nextDouble(); 
         c = entrada.nextDouble();
 
         TRIANGULO = (a * c)/2;
