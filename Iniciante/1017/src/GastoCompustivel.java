@@ -5,12 +5,12 @@ import java.util.Scanner;
  */
 public class GastoCompustivel {
     public static void main(String[] args){
-        Scanner entrada = new Scanner(System.in);
-        double horas = 0.0, velocidadeKm = 0.0;
+        Scanner entrada  = new Scanner(System.in);
+        int horas        = 0, velocidadeKm = 0;
         final double kmL = 12.0;
 
-        horas        = entrada.nextDouble();
-        velocidadeKm = entrada.nextDouble();
+        horas        = entrada.nextInt();
+        velocidadeKm = entrada.nextInt();
 
         System.out.printf("%.3f",(horas * velocidadeKm) / kmL);
 
