@@ -16,33 +16,26 @@ public class BitToBit {
     }
 
     public static void main(String[] args) throws IOException {
-        String[] valores = new String[2];
+        String[] valores ;
         String   aux;
-        long[]   numeros = new long[2];
+        long[]   numeros;
         long     resultado;
 
         aux = BitToBit.entrada().readLine();
 
-        while(aux != null && !(aux.isEmpty())){
-            valores   = aux.split(" ", 2);
+        valores   = new String[aux.split(" ").length];
+        valores   = aux.split(" ");
+        numeros   = new long[aux.split(" ").length];
+        int count = 0;
 
-            int count = 0;
-
-            for (String ax: valores) {
-                numeros[count] = Long.parseLong(ax);
-                count += 1;
-            }
-
-            resultado = numeros[0] ^ numeros[1];
-
-            System.out.println(resultado);
-
-            numeros[0] = 0;
-            numeros[1] = 0;
-            resultado  = 0;
-            aux = BitToBit.entrada().readLine();
+        for (String ax: valores) {
+             numeros[count] = Long.parseLong(ax);
+             count += 1;
         }
 
-
+        for(int coun = 0; coun < valores.length;coun= coun + 2){
+            resultado = numeros[coun]^numeros[coun+1];
+            System.out.println(resultado);
+        }
     }
 }
