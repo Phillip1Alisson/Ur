@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 
 /**
  * Created by gita on 08/02/17.
@@ -20,8 +21,10 @@ public class BitToBit {
         String   aux;
         long[]   numeros;
         long     resultado;
-
+        Scanner entrada = new Scanner(System.in);
         aux = BitToBit.entrada().readLine();
+
+
 
         valores   = new String[aux.split(" ").length];
         valores   = aux.split(" ");
