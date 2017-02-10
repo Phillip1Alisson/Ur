@@ -13,15 +13,25 @@ public class BitToBit {
         InputStream       is  = System.in;
         InputStreamReader isr = new InputStreamReader(is);
         return new BufferedReader(isr);
+    }
 
+    public static int xor(String valor){
+        String[] valores;
+        valores = valor.split(" ");
+        try {
+            return Integer.parseInt(valores[0]) ^ Integer.parseInt(valores[1]);
+        }catch(ArrayIndexOutOfBoundsException a){
+            return Integer.parseInt(valores[0]);
+        }catch(NumberFormatException n){
+            return 0;
+        }
     }
 
     public static void main(String[] args) throws IOException {
         String dados = null;
-        int valor1, valor2;
 
         while((dados = BitToBit.entrada().readLine())!= null){
-            valor1 = Integer.parseInt(String.valueOf(dados.split("\\s+[0]")));
+            System.out.println(BitToBit.xor(dados));
         }
 
     }
