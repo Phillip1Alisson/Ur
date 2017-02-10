@@ -17,28 +17,12 @@ public class BitToBit {
     }
 
     public static void main(String[] args) throws IOException {
-        String[] valores ;
-        String   aux;
-        long[]   numeros;
-        long     resultado;
-        Scanner entrada = new Scanner(System.in);
-        aux = BitToBit.entrada().readLine();
+        String dados = null;
+        int valor1, valor2;
 
-
-
-        valores   = new String[aux.split(" ").length];
-        valores   = aux.split(" ");
-        numeros   = new long[aux.split(" ").length];
-        int count = 0;
-
-        for (String ax: valores) {
-             numeros[count] = Long.parseLong(ax);
-             count += 1;
+        while((dados = BitToBit.entrada().readLine())!= null){
+            valor1 = Integer.parseInt(String.valueOf(dados.split("\\s+[0]")));
         }
 
-        for(int coun = 0; coun < valores.length;coun= coun + 2){
-            resultado = numeros[coun]^numeros[coun+1];
-            System.out.println(resultado);
-        }
     }
 }
